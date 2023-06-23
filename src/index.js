@@ -10,17 +10,20 @@ fetch(URL)
 
 
 function renderRamen(ramen) {
+    //Declaration process
     const ramenMenu = document.querySelector("#ramen-menu");
     
     const image = document.createElement("img");
+    //Brings the image to the ramenMenu
     image.src = ramen.image
     ramenMenu.append(image)
     
     image.addEventListener("click", () => {
         const ramenDetail = document.querySelector(".detail-image");
+        //Assignation process
         ramenDetail.src = ramen.image;
         ramenDetail.alt = ramen.image;
-        //Get the values from
+        //Get the values from the data base
         document.querySelector(".name").textContent = ramen.name;
         document.querySelector(".restaurant").textContent = ramen.restaurant;
         document.querySelector("#rating-display").textContent = ramen.rating;
